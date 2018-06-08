@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Form validation</title>
+  <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto:300" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css'>
+  <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/black-tie/jquery-ui.min.css'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<form class="form-container" name="signUpForm" action="" onsubmit="return false;" method="post">
+  <h1>Selection test</h1>
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="small-12 medium-6 cell">
+        <label>First name *
+          <input type="text" name="firstName" placeholder="First name" autocomplete="given-name" class="js-required" title="First name">
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Last name *
+          <input type="text" name="lastName" placeholder="Last name" autocomplete="family-name" class="js-required"
+                 title="Last name">
+        </label>
+      </div>
+      <div class="small-12 medium-12 cell">
+        <label>Birthday *
+          <!-- <input type="date" name="birthday" placeholder="Birthday" class="js-required" title="Birthday"> -->
+          <input type="text" id="datepicker" class="js-required js-datepicker" name="birthday" title="Birthday" placeholder="Birthday">
+        </label>
+      </div>
+      <fieldset class="small-12 cell">
+        <legend>Gender *</legend>
+        <label><input type="radio" name="gender" value="Male" id="genderMale" class="js-required" title="Gender" checked> Male</label>
+        <label><input type="radio" name="gender" value="Female" id="genderFemale" class="js-required" title="Gender"> Female</label>
+      </fieldset>
+      <div class="small-12 medium-6 cell">
+        <label>Country *
+          <select name="country" class="js-required" autocomplete="country-name" title="Country">
+            <option value="1">Ukraine</option>
+            <option value="2">Spain</option>
+            <option value="3">Poland</option>
+            <option value="4">Germany</option>
+            <option value="0">other</option>
+          </select>
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Email *
+          <input type="email" name="email" placeholder="Email" autocomplete="email" class="js-required" title="Email">
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Password *
+          <input type="password" name="password" placeholder="Password" autocomplete="current-password" class="js-required" title="Password">
+        </label>
+      </div>
+      <div class="small-12 medium-6 cell">
+        <label>Address *
+          <input type="text" name="address" placeholder="Address" autocomplete="address-line1" class="js-required" title="Address">
+        </label>
+      </div>
+      <div class="small-12 cell">
+        <label>Notes
+          <textarea placeholder="None" name="note" title="Notes"></textarea>
+        </label>
+      </div>
+      <div class="small-12 cell">
+        <button class="button primary" onclick="validateForm(this.form);" type="submit">Submit</button>
+      </div>
+    </div>
+  </div>
+</form>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+<script src="js/index.js"></script>
+
+</body>
+
+</html>

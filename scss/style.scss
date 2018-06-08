@@ -1,0 +1,42 @@
+$error-color: #e57373;
+
+.form-container {
+	max-width: 500px;
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+
+	h1 {
+		padding: 15px;
+		text-transform: uppercase;
+		font-family: 'Oswald', sans-serif;
+		text-align: center;
+	}
+
+	.button {
+		text-transform: uppercase;
+		font-family: 'Oswald', sans-serif;
+	}
+
+	label.js-error {
+		input {
+			margin-bottom: 0;
+			border: 1px solid $error-color;
+		}
+
+		.error-message {
+			position: relative;
+			background: $error-color;
+			display: block;
+			padding: 3px 15px;
+			text-align: center;
+			color: white;
+			margin-bottom: 16px;
+		}
+	}
+}
+
+.ui-button-icon-only {
+	box-sizing: border-box;
+	text-indent: -9999px;
+	white-space: nowrap;
+}
